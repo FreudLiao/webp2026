@@ -1,55 +1,55 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
+# --- Python 相關 (暫存與編譯檔) ---
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
-*.so.*
-*.dylib
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# --- 虛擬環境 (絕對不要傳，這是最佔空間的) ---
+# 包含你之前建立的 py3.12 或 venv
+py3.12/
+venv/
+my_env/
+env/
+ENV/
+.venv/
+.env/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# --- Django 相關 ---
+# 本地開發用的資料庫 (包含你的測試資料)
+db.sqlite3
+db.sqlite3-journal
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# 靜態檔案收集目錄 (執行 collectstatic 後產生的)
+static/
+staticfiles/
+media/
 
-# debug information files
-*.dwo
+# 日誌檔案 (包含你剛才練習設定的 debug.log)
+*.log
+debug.log
+
+# --- 系統與編輯器相關 ---
+# macOS 系統產生的垃圾檔
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code 設定 (如果你不想把自己的編輯器偏好傳上去)
+.vscode/
+
+# PyCharm 設定
+.idea/
