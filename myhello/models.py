@@ -21,3 +21,11 @@ class User(models.Model):
 
     def __str__(self):
         return self.first_name
+    
+class Course(models.Model):
+    Department = models.CharField(max_length=100)  # 開課單位
+    CourseTitle = models.CharField(max_length=100) # 課程名稱
+    Instructor = models.CharField(max_length=100)  # 授課老師
+
+    def __str__(self):
+        return self.CourseTitle
