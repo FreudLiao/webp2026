@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+py3.12/
+__pycache__/
+*.pyc
+db.sqlite3
+debug.log
+.DS_Store
