@@ -52,7 +52,5 @@ def add_course(request):
 
 @api_view(['GET'])
 def course_table(request):
-    # 從資料庫抓出所有課程
-    courses = Course.objects.all() 
-    # 使用 render 將資料傳給 HTML 檔案
-    return render(request, 'courses.html', {'courses': courses})
+    courses = Course.objects.all()
+    return render(request, 'course_list.html', {'courses': courses})

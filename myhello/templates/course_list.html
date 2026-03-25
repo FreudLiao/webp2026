@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>資工選課表</title>
+    <style>
+        /* 設定表格整體樣式 */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse; /* 合併邊框 */
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+        }
+        /* 表頭樣式：深綠色背景、白色文字 */
+        th {
+            background-color: #00A86B; 
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        /* 單元格樣式 */
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+        /* 偶數行變灰色（間隔色效果） */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* 標題樣式 */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>資工選課表</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>開課單位</th>
+                <th>課程名稱</th>
+                <th>授課教師</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.Department }}</td>
+                <td>{{ course.CourseTitle }}</td>
+                <td>{{ course.Instructor }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" style="text-align:center;">目前沒有課程資料</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
