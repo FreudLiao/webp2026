@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<body>
+    <h1>聖誕樹 (請按F12打開 Console) 🎄</h1>
+
+    <script>
+        function repeatchar(n, arg_char) {
+            let res = "";
+            for (let i = 0; i < n; i++) {
+                res += arg_char;
+            }
+            return res;
+        }
+
+        function printTreeTop(n) {
+            let topStr = "";
+            for (let i = 0; i < n; i++) {
+                let spaces = repeatchar(n - 1 - i, ' ');
+                let stars = repeatchar(2 * i + 1, '*');
+                let line = spaces + stars;
+                console.log(line);
+                topStr += line + "\n";
+            }
+            return topStr;
+        }
+
+        function printTreeBottom(n) {
+            let bottomStr = "";
+            for (let i = 0; i < 3; i++) {
+                let spaces = repeatchar(n - 1, ' ');
+                let line = spaces + "*";
+                
+                // 在 console 印出時，每一行後面加不同數量的空格
+                // 第一行加 0 個，第二行加 1 個，第三行加 2 個
+                // 這樣 console 就不會把它們視為重複行而合併
+                console.log(line + repeatchar(i, ' ')); 
+                
+                bottomStr += line + "\n";
+            }
+            return bottomStr;
+        }
+
+        function tree(n) {
+            console.log("--- 🎄 聖誕樹啟動 (n=" + n + ") ---");
+            let fullTree = "";
+            fullTree += printTreeTop(n);
+            fullTree += printTreeBottom(n);
+            
+
+        }
+
+        tree(4);
+    </script>
+</body>
+</html>
