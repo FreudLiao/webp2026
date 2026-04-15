@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex#6 打字機遊戲</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #f0f2f5;
+        }
+        #container {
+            font-size: 5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #04AA6D;
+            letter-spacing: 10px;
+            padding: 30px;
+            border: 3px solid #04AA6D;
+            background: white;
+            border-radius: 15px;
+            min-width: 400px;
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4 mb-3">打字機</h1>
+        <p class="text-secondary mb-5">按下畫面上顯示的第一個英文字母來消除它！</p>
+        
+        <div id="container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
